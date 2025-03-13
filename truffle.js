@@ -1,10 +1,21 @@
 module.exports = {
-  migrations_directory: "./migrations",
+  contracts_build_directory: "./build/contracts",
   networks: {
     development: {
-      host: "localhost",
+      host: "127.0.0.1",
       port: 8545,
-      network_id: "*" // Match any network id
+      network_id: "*", // Connects to any network
+    }
+  },
+  compilers: {
+    solc: {
+      version: "0.5.16", // Match your Solidity version
+      settings: {
+        optimizer: {
+          enabled: true,
+          runs: 200
+        }
+      }
     }
   }
 };

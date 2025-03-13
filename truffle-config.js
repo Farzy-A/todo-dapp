@@ -1,10 +1,14 @@
 module.exports = {
-  migrations_directory: "./migrations",
   networks: {
     development: {
-      host: "localhost",
-      port: 8545,
-      network_id: "*" // Match any network id
+      host: "192.168.0.80", // Your Windows machine IP
+      port: 8545, // Ganache port
+      network_id: "5777" // Match Ganache network ID
+    }
+  },
+  compilers: {
+    solc: {
+      version: "0.5.16" // Match Solidity version
     }
   }
 };
